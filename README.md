@@ -23,5 +23,5 @@ I am diligently working on this project and plan for it to be ready for 2020 US 
 ## Completed Work
 * Django REST Framework
     * REST API setup
-    * Initipal database structure setup
+    * Initial database structure setup
 * Github setup

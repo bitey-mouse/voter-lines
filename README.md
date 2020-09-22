@@ -12,7 +12,7 @@ Mobile app to allow voters to view the line-wait-time at the polls on election d
 </p>
 
 ## Why bother?
-To allow users to get a real-time view of wait times at all the polling locations they are allowed to cast a ballot. While extensive delays at the polls are disruptive to the average citizen in any election, for 2020, we need to avoid crowded venues to hinder the spread of COVID-19. This app saves lives!
+Users receive a real-time view of wait times at all the polling locations they are allowed to cast a ballot. While extensive delays at the polls are disruptive to the average citizen in any election, for 2020, we need to avoid crowded venues to hinder the spread of COVID-19. This app saves lives!
 
 # Under Construction! Working for Election 2020
 I am diligently working on this project and plan for it to be ready for 2020 US General election in November. If you are interested in helping, please reach out!

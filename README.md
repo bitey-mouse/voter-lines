@@ -5,8 +5,6 @@ Mobile app to allow voters to view the line-wait-time at the polls on election d
 I am diligently working on this project and plan for it to be ready for 2020 US election in November. If you are interested in helping, please reach out!
 
 ## Work To Be Done
-* requirements.txt
-* venv
 * Heroku setup
 * React Native via Expo:
     * User Signup with Address
@@ -25,3 +23,6 @@ I am diligently working on this project and plan for it to be ready for 2020 US 
     * REST API setup
     * Initial database structure setup
 * Github setup
+
+## 2020 Election ETA Polling Data by State:
+https://docs.google.com/spreadsheets/d/17sOYnw7VGg-1LVCKplvqc38HOpYdoKT0wPyWcMRoKSg/edit?ts=5f583584#gid=0

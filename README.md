@@ -23,3 +23,6 @@ I am diligently working on this project and plan for it to be ready for 2020 US 
     * REST API setup
     * Initial database structure setup
 * Github setup
+
+## 2020 Election ETA Polling Data by State:
+https://docs.google.com/spreadsheets/d/17sOYnw7VGg-1LVCKplvqc38HOpYdoKT0wPyWcMRoKSg/edit?ts=5f583584#gid=0

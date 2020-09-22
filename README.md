@@ -1,8 +1,21 @@
 # Project: Voter Lines 2020
+<p align="center"><img width="50%" height="50%" src="static/img/ants-on-flag1.png?raw=true"></p>
+
+<p align="center">
+<img src="https://img.shields.io/badge/ReactNative-✔-blue.svg?style=plastic">
+<img src="https://img.shields.io/badge/DjangoRest-✔-brightgreen.svg?style=plastic">
+<img src="https://img.shields.io/badge/Python-3-brightgreen.svg?style=plastic">
+<img src="https://img.shields.io/badge/Heroku-✔-blueviolet.svg?style=plastic">
+</p>
+<p>
 Mobile app to allow voters to view the line-wait-time at the polls on election day by way of crowd-sourcing, geo-fencing, and Google Civic data. React Native front, Django Rest Framework API back.
+</p>
+
+## Why bother?
+To allow users to get a real-time view of wait times at all the polling locations they are allowed to cast a ballot. While extensive delays at the polls are disruptive to the average citizen in any election, for 2020, we need to avoid crowded venues to hinder the spread of COVID-19. This app saves lives!
 
 # Under Construction! Working for Election 2020
-I am diligently working on this project and plan for it to be ready for 2020 US election in November. If you are interested in helping, please reach out!
+I am diligently working on this project and plan for it to be ready for 2020 US General election in November. If you are interested in helping, please reach out!
 
 ## Work To Be Done
 * Heroku setup

@@ -3,6 +3,7 @@
 
 # Ignore config setups
 config.py
+secret_key.py
 
 # Editors
 .vscode/

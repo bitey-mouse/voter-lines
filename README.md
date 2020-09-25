@@ -29,7 +29,6 @@ Users receive a real-time view of wait times at all the polling locations they a
 I am diligently working on this project and plan for it to be ready for 2020 US General election in November. If you are interested in helping, please reach out!
 
 ## Work To Be Done
-* Heroku setup
 * React Native via Expo:
     * User Signup with Address
 * Google Civic integration - lookup valid polling places from user address
@@ -42,6 +41,8 @@ I am diligently working on this project and plan for it to be ready for 2020 US 
     * Apple
 
 ## Completed Work
+* Heroku setup:
+   * API root: https://voter-lines.herokuapp.com/
 * Django REST Framework
     * REST API setup
     * Initial database structure setup

@@ -29,3 +29,23 @@ class Address(models.Model):
 
     # def __str__(self):
     #     return self.name
+
+    def __add_if_exists(self, full_s, field, prepend_comma=False):
+        if field:
+            if prepend_comma:
+                full_s += ', ' + field.strip()
+            else:
+                full_s += ' ' + field.strip()
+        return full_s
+
+
+
+    def url_string(self):
+        s = ''
+        s = self.__add_if_exists(s, self.street1)
+        s = self.__add_if_exists(s, self.street2)
+        s = self.__add_if_exists(s, self.city, True)
+        s = self.__add_if_exists(s, self.state, True)
+        s = self.__add_if_exists(s, self.zip_code)
+        return s
+

@@ -1,5 +1,5 @@
 # Project: Voter Lines 2020
-<p align="center"><img width="50%" height="50%" src="static/img/ants-on-flag1.png?raw=true"></p>
+<p align="center"><img width="50%" height="50%" src="../static/img/ants-on-flag1.png?raw=true"></p>
 
 <p align="center">
 <img src="https://img.shields.io/badge/ReactNative-✔-blue.svg?style=plastic">

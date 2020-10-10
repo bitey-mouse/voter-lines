@@ -1,3 +1,5 @@
+from decimal import Decimal
+
 #from generic_relations.relations import GenericRelatedField
 from rest_framework import serializers
 from rest_framework.response import Response
@@ -103,11 +105,51 @@ class UserSerializer(BaseModelSerializer):
                     ## TODO: SEARCH IF POLLING LOCATION MATCH IS FOUND IN DATABASE
                     ###      AND USE IT IF FOUND. IF DNE, THEN CREATE NEW POLLING LOCATION
                     ###   MAYBE MOVE THIS PART TO GoogleCivic class, SINCE WE'LL NEED TO DO THIS
-                 ###       DAILY IN A SCRIPT.
+                    ###       DAILY IN A SCRIPT.
+                    pl_obj = None
 
+                    # Match by civic_id
+                    if pl_data['google_civic_id']:
+                        try:
+                            pl_obj = PollingLocation.objects.get(google_civic_id=pl_data['google_civic_id'])
+                            print(f'PollingLocation match found by google_civic_id:  id={pl_obj.id}')
+                        except:
+                            pass
+                    # Match by coordinates
+                    if not pl_obj and (pl_address_data['latitude'] and pl_address_data['longitude'] ):
+                        try:
+                            pl_obj = PollingLocation.objects.get(
+                                address__latitude=pl_address_data['latitude'],
+                                address__longitude=pl_address_data['longitude'])
+                            print(f'PollingLocation match found by coordinates:  id={pl_obj.id}')
+                        #except:
+                        except Exception as e:
+                            print(e)
+                            print(f"LAT: {pl_address_data['latitude']} ==> {Decimal(pl_address_data['latitude'])}")
+                            print(f"LON: {pl_address_data['longitude']} ==> {Decimal(pl_address_data['longitude'])}")
+                            pass
+                    # Match by address
+                    if not pl_obj and (
+                        pl_address_data['street1'] and pl_address_data['city'] and
+                        pl_address_data['state'] and pl_address_data['zip_code'] ):
+                        try:
+                            pl_obj = PollingLocation.objects.get(
+                                address__street1=pl_address_data['street1'],
+                                address__city=pl_address_data['city'],
+                                address__state=pl_address_data['state'],
+                                address__zip_code=pl_address_data['zip_code'])
+                            print(f'PollingLocation match found by address:  id={pl_obj.id}')
+                        except:
+                            pass
 
-                    pl_address_obj = Address.objects.create(**pl_address_data)
-                    user.polling_locations.add(PollingLocation.objects.create(address=pl_address_obj ,**pl_data))
+                    if not pl_obj:
+                        # No prev match found. Must create new one polling location
+                        pl_address_obj = Address.objects.create(**pl_address_data)
+                        pl_obj = PollingLocation.objects.create(address=pl_address_obj ,**pl_data)
+                        print(f'No previous PollingLocation found. Creating new object:  id={pl_obj.id}')
+                      
+
+                    user.polling_locations.add(pl_obj)
         return user
 
 
